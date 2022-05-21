@@ -21,7 +21,6 @@
         </activity>
         <activity
             android:name=".ui.login.LoginActivity"
-            android:theme="@style/NoBar"
             android:exported="false" />
     </application>
 

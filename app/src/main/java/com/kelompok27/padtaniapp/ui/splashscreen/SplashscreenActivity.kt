@@ -17,7 +17,7 @@ class SplashscreenActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.ivLogo.alpha = 0f
-        binding.ivLogo.animate().setDuration(1500).alpha(1f).withEndAction{
+        binding.ivLogo.animate().setDuration(4000).alpha(1f).withEndAction{
             val intentToMain = Intent(this@SplashscreenActivity, LoginActivity::class.java)
             startActivity(intentToMain)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
