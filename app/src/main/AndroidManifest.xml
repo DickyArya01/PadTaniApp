@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PadTaniApp">
         <activity
-            android:name="com.kelompok27.padtaniapp.ui.splashscreen.SplashscreenActivity"
-            android:theme="@style/NoBar"
-            android:exported="true">
+            android:name=".ui.register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.splashscreen.SplashscreenActivity"
+            android:exported="true"
+            android:theme="@style/NoBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
