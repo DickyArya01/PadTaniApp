@@ -13,7 +13,11 @@
             android:name=".ui.register.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.splashscreen.SplashscreenActivity"
+            android:name=".ui.main.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.kelompok27.padtaniapp.ui.splashscreen.SplashscreenActivity"
+
             android:exported="true"
             android:theme="@style/NoBar">
             <intent-filter>
