@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.kelompok27.padtaniapp.databinding.ActivitySplashscreenBinding
 import com.kelompok27.padtaniapp.ui.login.LoginActivity
+import com.kelompok27.padtaniapp.ui.register.RegisterActivity
 
 @SuppressLint("CustomSplashScreen")
 class SplashscreenActivity : AppCompatActivity() {

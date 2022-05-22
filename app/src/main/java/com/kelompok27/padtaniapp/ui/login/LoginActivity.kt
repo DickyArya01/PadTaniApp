@@ -8,6 +8,7 @@ import androidx.appcompat.widget.Toolbar
 import com.kelompok27.padtaniapp.R
 import com.kelompok27.padtaniapp.databinding.ActivityLoginBinding
 import com.kelompok27.padtaniapp.ui.main.MainActivity
+import com.kelompok27.padtaniapp.ui.register.RegisterActivity
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -19,14 +20,20 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        customToolbar= findViewById(R.id.toolbar)
-        textToolbar = findViewById(R.id.toolbarTitle)
-
-        setSupportActionBar(customToolbar)
-        textToolbar.text = "Sign in"
+        customToolbar("Sign in")
 
         binding.btnLogin.setOnClickListener {
             intentToMain()
+        }
+
+        binding.tvDaftar.setOnClickListener {
+           intentToRegister()
+        }
+    }
+
+    private fun intentToRegister(){
+        Intent(this@LoginActivity, RegisterActivity::class.java).also {
+            startActivity(it)
         }
     }
 
@@ -34,6 +41,14 @@ class LoginActivity : AppCompatActivity() {
         Intent(this@LoginActivity, MainActivity::class.java).also {
             startActivity(it)
         }
+    }
+
+    private fun customToolbar(desc: String){
+        customToolbar= findViewById(R.id.toolbar)
+        textToolbar = findViewById(R.id.toolbarTitle)
+
+        setSupportActionBar(customToolbar)
+        textToolbar.text = "$desc"
     }
 
 }
