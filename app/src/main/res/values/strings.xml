@@ -7,4 +7,5 @@
     <string name="nama">Nama</string>
     <string name="konfirmasi_password">Konfirmasi Password</string>
     <string name="daftar">Daftar</string>
+    <string name="sign_in">Sign in</string>
 </resources>
