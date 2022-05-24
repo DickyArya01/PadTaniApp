@@ -10,16 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PadTaniApp">
         <activity
+            android:name=".MainActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_main2" />
+        <activity
             android:name=".ui.register.RegisterActivity"
             android:exported="false"
-            android:label=""/>
+            android:label="" />
         <activity
             android:name=".ui.main.MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.PadTaniApp"/>
+            android:theme="@style/Theme.PadTaniApp" />
         <activity
             android:name="com.kelompok27.padtaniapp.ui.splashscreen.SplashscreenActivity"
-
             android:exported="true"
             android:theme="@style/NoBar">
             <intent-filter>
@@ -31,7 +34,7 @@
         <activity
             android:name=".ui.login.LoginActivity"
             android:exported="false"
-            android:label=""/>
+            android:label="" />
     </application>
 
 </manifest>

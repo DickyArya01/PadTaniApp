@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/imHome"
-        android:title="@string/home"
-        android:icon="@drawable/ic_home" />
+    <item
+        android:id="@+id/imHome"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
 
-    <item android:id="@+id/imCalcul"
-        android:title="@string/calculate"
-        android:icon="@drawable/ic_calculator" />
+    <item
+        android:id="@+id/imCalcul"
+        android:icon="@drawable/ic_calculator"
+        android:title="@string/calculate" />
 
-    <item android:id="@+id/textinput_placeholder"
+    <item
+        android:id="@+id/textinput_placeholder"
         android:title="" />
 
-    <item android:id="@+id/imloc"
-        android:title="@string/location"
-        android:icon="@drawable/ic_location" />
+    <item
+        android:id="@+id/imloc"
+        android:icon="@drawable/ic_location"
+        android:title="@string/location" />
 
-    <item android:id="@+id/imProfile"
-        android:title="@string/profile"
-        android:icon="@drawable/ic_profile" />
+    <item
+        android:id="@+id/imProfile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/profile" />
+
 
 </menu>

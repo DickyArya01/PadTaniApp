@@ -43,12 +43,12 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun customToolbar(desc: String){
+    private fun customToolbar(description: String){
         customToolbar= findViewById(R.id.toolbar)
         textToolbar = findViewById(R.id.toolbarTitle)
 
         setSupportActionBar(customToolbar)
-        textToolbar.text = "$desc"
+        textToolbar.text = description
     }
 
 }
