@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/imHome"
+        android:title="Home"
+        android:icon="@drawable/ic_home" />
+
+    <item android:id="@+id/imCalcul"
+        android:title="Calculate"
+        android:icon="@drawable/ic_calculator" />
+
+    <item android:id="@+id/textinput_placeholder"
+        android:title="" />
+
+    <item android:id="@+id/imloc"
+        android:title="Location"
+        android:icon="@drawable/ic_location" />
+
+    <item android:id="@+id/imProfile"
+        android:title="Profile"
+        android:icon="@drawable/ic_profile" />
+
+</menu>
