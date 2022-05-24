@@ -15,7 +15,8 @@
             android:label=""/>
         <activity
             android:name=".ui.main.MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.PadTaniApp"/>
         <activity
             android:name="com.kelompok27.padtaniapp.ui.splashscreen.SplashscreenActivity"
 

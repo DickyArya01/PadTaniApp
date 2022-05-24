@@ -9,4 +9,10 @@
     <string name="daftar">Daftar</string>
     <string name="sign_in">Sign in</string>
     <string name="belum_punya_akun">Belum punya akun?</string>
+    <string name="scan">Scan</string>
+    <string name="home">Home</string>
+    <string name="calculate">Calculate</string>
+    <string name="location">Location</string>
+    <string name="profile">Profile</string>
+    <string name="harga">harga</string>
 </resources>
