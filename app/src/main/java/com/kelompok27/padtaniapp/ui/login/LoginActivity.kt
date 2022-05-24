@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import com.kelompok27.padtaniapp.R
 import com.kelompok27.padtaniapp.databinding.ActivityLoginBinding
-import com.kelompok27.padtaniapp.ui.main.MainActivity
+import com.kelompok27.padtaniapp.ui.main.ui.MainActivity
 import com.kelompok27.padtaniapp.ui.register.RegisterActivity
 
 class LoginActivity : AppCompatActivity() {
