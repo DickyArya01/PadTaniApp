@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PadTaniApp</string>
+    <string name="app_name">PadTani</string>
     <string name="remember_me">Remember me</string>
     <string name="login">Login</string>
     <string name="password">Password</string>
