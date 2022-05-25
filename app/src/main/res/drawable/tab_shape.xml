@@ -6,5 +6,5 @@
         android:color="@color/green_700"
         />
     <corners
-        android:radius="240dp"/>
+        android:radius="6dp"/>
 </shape>

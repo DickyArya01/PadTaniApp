@@ -62,6 +62,7 @@
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="@+id/flBanner"
         app:layout_constraintStart_toStartOf="@+id/tvBibit"
         app:layout_constraintTop_toBottomOf="@+id/tvBibit"
@@ -71,8 +72,8 @@
         app:tabIndicatorFullWidth="true"
         app:tabIndicatorHeight="40dp"
         app:tabInlineLabel="false"
-        app:tabTextAppearance="@style/CustomTabStyle"
         app:tabSelectedTextColor="@color/white_200"
+        app:tabTextAppearance="@style/CustomTabStyle"
         app:tabTextColor="@color/white_600">
 
         <com.google.android.material.tabs.TabItem
