@@ -4,24 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="8dp"
+    android:paddingHorizontal="16dp"
     tools:context=".ui.main.ui.home.HomeFragment">
 
     <FrameLayout
         android:id="@+id/flBanner"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleType="center"
-            android:src="@drawable/photo_home" />
+            android:scaleType="fitXY"
+            android:src="@drawable/photo_home"
+            app:shapeAppearanceOverlay="@style/RoundImgView" />
 
         <TextView
             android:id="@+id/textView"
@@ -37,13 +38,98 @@
         <ImageButton
             android:id="@+id/imageButton2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="112dp"
             android:background="#00FFFFFF"
-            android:src="@drawable/ic_img_btn" />
+            android:minHeight="48dp"
+            android:src="@drawable/ic_img_btn"
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/banner_shape"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintStart_toStartOf="@id/flBanner"
+        app:layout_constraintTop_toBottomOf="@id/flBanner">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_calculator_ban" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:text="@string/calculate"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="159dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/slogan_calculate"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp" />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/flLocation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/loc_banner_shape"
+        android:orientation="vertical"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="12dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/flCalculate"
+        app:layout_constraintEnd_toEndOf="@+id/flBanner"
+        app:layout_constraintStart_toEndOf="@+id/flCalculate"
+        app:layout_constraintTop_toTopOf="@+id/flCalculate">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/ic_location_banner" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/location"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/slogan_location"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvBibit"
@@ -54,8 +140,8 @@
         android:textColor="@color/green_800"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/flBanner"
-        app:layout_constraintTop_toBottomOf="@+id/flBanner" />
+        app:layout_constraintStart_toStartOf="@+id/flCalculate"
+        app:layout_constraintTop_toBottomOf="@+id/flCalculate" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
