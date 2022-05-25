@@ -15,6 +15,7 @@
         <item name="android:statusBarColor">@color/white_200</item>
         <!-- Customize your theme here. -->
     </style>
+    <!-- Splashscreen    -->
     <style name="NoBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:statusBarColor">@color/green_700</item>
     </style>
@@ -22,5 +23,11 @@
         <item name="colorPrimary">@color/green_700</item>
         <item name="android:statusBarColor">@color/white_200</item>
         <item name="colorSecondaryVariant">@color/white</item>
+    </style>
+    <!-- tab layout-->
+    <style name="CustomTabStyle" parent="Widget.Design.TabLayout">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor"></item>
     </style>
 </resources>

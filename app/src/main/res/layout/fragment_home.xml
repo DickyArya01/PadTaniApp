@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="24dp"
-            android:text="Rawat padimu, perbanyak penenmu dengan PadTani"
+            android:text="@string/app_slogan"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Bibit"
+        android:text="@string/bibit"
         android:textColor="@color/green_800"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -58,30 +58,43 @@
         app:layout_constraintTop_toBottomOf="@+id/flBanner" />
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tablayout"
-        android:layout_width="match_parent"
+        android:id="@+id/tabs"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="8dp"
-        android:background="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/flBanner"
+        app:layout_constraintStart_toStartOf="@+id/tvBibit"
         app:layout_constraintTop_toBottomOf="@+id/tvBibit"
         app:tabIndicator="@drawable/tab_shape"
-        app:tabIndicatorAnimationMode="linear"
+        app:tabIndicatorAnimationMode="elastic"
         app:tabIndicatorColor="@color/green_700"
+        app:tabIndicatorFullWidth="true"
         app:tabIndicatorHeight="40dp"
-        app:tabMode="fixed"
-        app:tabSelectedTextColor="@color/white"
-        app:tabTextColor="@color/white" />
+        app:tabInlineLabel="false"
+        app:tabTextAppearance="@style/CustomTabStyle"
+        app:tabSelectedTextColor="@color/white_200"
+        app:tabTextColor="@color/white_600">
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tablayout" />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inpari" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inpago" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Hipa" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Inpara" />
+    </com.google.android.material.tabs.TabLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
