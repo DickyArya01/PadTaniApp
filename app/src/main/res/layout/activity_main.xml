@@ -21,7 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:background="@color/white"
+            android:background="@color/white_200"
+            app:backgroundTint="@color/white_200"
             app:fabCradleMargin="20dp"
             app:fabCradleRoundedCornerRadius="20dp"
             app:fabCradleVerticalOffset="10dp">
@@ -42,7 +43,7 @@
             android:layout_height="wrap_content"
             android:contentDescription="@string/scan"
             android:src="@drawable/ic_scanner"
-            app:backgroundTint="@color/white"
+            app:backgroundTint="@color/white_200"
             app:layout_anchor="@id/bottomAppBar" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

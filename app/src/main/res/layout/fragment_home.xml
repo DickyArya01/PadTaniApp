@@ -1,187 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="16dp"
-    tools:context=".ui.main.ui.home.HomeFragment">
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp">
 
-    <FrameLayout
-        android:id="@+id/flBanner"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageView5"
+        tools:context=".ui.main.ui.home.HomeFragment">
+
+        <FrameLayout
+            android:id="@+id/flBanner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleType="fitXY"
-            android:src="@drawable/photo_home"
-            app:shapeAppearanceOverlay="@style/RoundImgView" />
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/photo_home"
+                app:shapeAppearanceOverlay="@style/RoundImgView" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="187dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/app_slogan"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="112dp"
+                android:background="#00FFFFFF"
+                android:minHeight="48dp"
+                android:src="@drawable/ic_img_btn"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/banner_shape"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="10dp"
+            app:layout_constraintStart_toStartOf="@id/flBanner"
+            app:layout_constraintTop_toBottomOf="@id/flBanner">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_calculator_ban" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:text="@string/calculate"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="159dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/slogan_calculate"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp" />
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/flLocation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/loc_banner_shape"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/flCalculate"
+            app:layout_constraintEnd_toEndOf="@+id/flBanner"
+            app:layout_constraintStart_toEndOf="@+id/flCalculate"
+            app:layout_constraintTop_toTopOf="@+id/flCalculate">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/ic_location_banner" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/slogan_location"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp" />
+
+
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="187dp"
+            android:id="@+id/tvBibit"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="24dp"
-            android:text="@string/app_slogan"
-            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp"
+            android:text="@string/bibit"
+            android:textColor="@color/green_800"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/flCalculate"
+            app:layout_constraintTop_toBottomOf="@+id/flCalculate" />
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="112dp"
-            android:background="#00FFFFFF"
-            android:minHeight="48dp"
-            android:src="@drawable/ic_img_btn"
-            tools:ignore="SpeakableTextPresentCheck" />
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/white_200"
+            app:layout_constraintEnd_toEndOf="@+id/flBanner"
+            app:layout_constraintStart_toStartOf="@+id/tvBibit"
+            app:layout_constraintTop_toBottomOf="@+id/tvBibit"
+            app:tabIndicator="@drawable/tab_shape"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabIndicatorColor="@color/green_700"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorHeight="40dp"
+            app:tabInlineLabel="false"
+            app:tabSelectedTextColor="@color/white_200"
+            app:tabTextAppearance="@style/CustomTabStyle"
+            app:tabTextColor="@color/white_600">
 
-    </FrameLayout>
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inpari" />
 
-    <FrameLayout
-        android:id="@+id/flCalculate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/banner_shape"
-        android:paddingHorizontal="12dp"
-        android:paddingVertical="10dp"
-        app:layout_constraintStart_toStartOf="@id/flBanner"
-        app:layout_constraintTop_toBottomOf="@id/flBanner">
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inpago" />
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|start"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_calculator_ban" />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Hipa" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:text="@string/calculate"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="159dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginBottom="4dp"
-            android:text="@string/slogan_calculate"
-            android:textColor="#FFFFFF"
-            android:textSize="11sp" />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Inpara" />
+        </com.google.android.material.tabs.TabLayout>
 
 
-    </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
-        android:id="@+id/flLocation"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/loc_banner_shape"
-        android:orientation="vertical"
-        android:paddingHorizontal="6dp"
-        android:paddingVertical="12dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="@+id/flCalculate"
-        app:layout_constraintEnd_toEndOf="@+id/flBanner"
-        app:layout_constraintStart_toEndOf="@+id/flCalculate"
-        app:layout_constraintTop_toTopOf="@+id/flCalculate">
+</ScrollView>
 
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="center"
-            android:src="@drawable/ic_location_banner" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/location"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/slogan_location"
-            android:textColor="#FFFFFF"
-            android:textSize="10sp" />
-
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/tvBibit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/bibit"
-        android:textColor="@color/green_800"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/flCalculate"
-        app:layout_constraintTop_toBottomOf="@+id/flCalculate" />
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabs"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/flBanner"
-        app:layout_constraintStart_toStartOf="@+id/tvBibit"
-        app:layout_constraintTop_toBottomOf="@+id/tvBibit"
-        app:tabIndicator="@drawable/tab_shape"
-        app:tabIndicatorAnimationMode="elastic"
-        app:tabIndicatorColor="@color/green_700"
-        app:tabIndicatorFullWidth="true"
-        app:tabIndicatorHeight="40dp"
-        app:tabInlineLabel="false"
-        app:tabSelectedTextColor="@color/white_200"
-        app:tabTextAppearance="@style/CustomTabStyle"
-        app:tabTextColor="@color/white_600">
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/inpari" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/inpago" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Hipa" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Inpara" />
-    </com.google.android.material.tabs.TabLayout>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
