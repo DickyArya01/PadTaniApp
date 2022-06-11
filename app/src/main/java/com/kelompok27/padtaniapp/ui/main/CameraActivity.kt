@@ -28,6 +28,8 @@ class CameraActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnCapture.setOnClickListener { takePhoto() }
+
+        binding.btnFolder.setOnClickListener { openGallery() }
     }
 
     public override fun onResume() {
@@ -37,7 +39,19 @@ class CameraActivity : AppCompatActivity() {
     }
 
     private fun takePhoto() {
+        Toast.makeText(
+            this@CameraActivity,
+            "Yee ke foto",
+            Toast.LENGTH_SHORT
+        ).show()
+    }
 
+    private fun openGallery() {
+        Toast.makeText(
+            this@CameraActivity,
+            "Yee buka gallery",
+            Toast.LENGTH_SHORT
+        ).show()
     }
 
     private fun startCamera() {
