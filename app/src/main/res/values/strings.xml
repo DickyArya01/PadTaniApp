@@ -14,6 +14,7 @@
     <string name="calculate">Calculate</string>
     <string name="location">Location</string>
     <string name="profile">Profile</string>
+    <string name="fragment">fragment</string>
     <string name="harga">harga</string>
     <string name="title_activity_main2">MainActivity2</string>
     <string name="title_home">Home</string>

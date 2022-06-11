@@ -4,25 +4,19 @@
         android:id="@+id/imHome"
         android:icon="@drawable/ic_home"
         android:title="@string/home" />
-
+    <item
+        android:id="@+id/imexplore"
+        android:icon="@drawable/ic_category"
+        android:title="Explore"/>
+    <item
+        android:id="@+id/textinput_placeholder"
+        android:title="" />
     <item
         android:id="@+id/imCalcul"
         android:icon="@drawable/ic_calculator"
         android:title="@string/calculate" />
-
-    <item
-        android:id="@+id/textinput_placeholder"
-        android:title="" />
-
     <item
         android:id="@+id/imloc"
         android:icon="@drawable/ic_location"
         android:title="@string/location" />
-
-    <item
-        android:id="@+id/imProfile"
-        android:icon="@drawable/ic_profile"
-        android:title="@string/profile" />
-
-
 </menu>

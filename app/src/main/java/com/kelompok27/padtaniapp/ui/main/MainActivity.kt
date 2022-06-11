@@ -4,6 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.system.Os
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.kelompok27.padtaniapp.R
 import com.kelompok27.padtaniapp.databinding.ActivityMainBinding
@@ -30,14 +34,35 @@ class MainActivity : AppCompatActivity() {
 
         makeCurrentFragment(homeFragment)
 
-        binding.bottomNavigationView.setOnNavigationItemSelectedListener {
+//        binding.bottomNavigationView.OnNavigationItemSelectedListener { item ->
+//            when(item.itemId){
+//                R.id.imHome -> makeCurrentFragment(homeFragment)
+//                R.id.imCalcul -> makeCurrentFragment(calculateFragment)
+//                R.id.imloc -> makeCurrentFragment(locationFragment)
+//                R.id.imexplore -> makeCurrentFragment(profileFragment)
+//            }
+//            true
+//        }
+        binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
-                R.id.imHome -> makeCurrentFragment(homeFragment)
-                R.id.imCalcul -> makeCurrentFragment(calculateFragment)
-                R.id.imloc -> makeCurrentFragment(locationFragment)
-                R.id.imProfile -> makeCurrentFragment(profileFragment)
+                R.id.imHome -> {
+                    makeCurrentFragment(homeFragment)
+                    return@setOnItemSelectedListener true
+                }
+                R.id.imCalcul -> {
+                    makeCurrentFragment(calculateFragment)
+                    return@setOnItemSelectedListener true
+                }
+                R.id.imloc -> {
+                    makeCurrentFragment(locationFragment)
+                    return@setOnItemSelectedListener true
+                }
+                R.id.imexplore -> {
+                    makeCurrentFragment(profileFragment)
+                    return@setOnItemSelectedListener true
+                }
             }
-            true
+            false
         }
     }
 
