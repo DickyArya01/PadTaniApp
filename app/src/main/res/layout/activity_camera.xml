@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/transparent"
     tools:context=".camera">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,31 +22,42 @@
             android:id="@+id/cameraFinder"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="180dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnAlbum"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:layout_gravity="center|end"
+            android:id="@+id/btnFolder"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp"
+            android:theme="@style/ButtonCustom"
+            android:elevation="5dp"
+            android:insetLeft="0dp"
             android:insetTop="0dp"
+            android:insetRight="0dp"
             android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:stateListAnimator="@null"
+            android:text=""
             app:cornerRadius="50dp"
+            app:icon="@drawable/ic_folder_filled"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btnCapture"
-            app:layout_constraintTop_toTopOf="@+id/btnCapture"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCapture"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_gravity="center"
+            android:layout_marginBottom="32dp"
             android:backgroundTint="@color/white_200"
             android:elevation="5dp"
             android:insetLeft="0dp"
@@ -65,16 +75,14 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.88"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/btnClose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:background="#00FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
