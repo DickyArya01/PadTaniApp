@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kelompok27.padtaniapp">
 
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,15 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PadTaniApp">
         <activity
-            android:name=".camera"
+            android:name=".ui.main.CameraActivity"
             android:exported="false" />
         <activity
             android:name=".ui.splashscreen.SplashCamera"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity2"
-            android:exported="false"
-            android:label="@string/title_activity_main2" />
         <activity
             android:name=".ui.register.RegisterActivity"
             android:exported="false"
