@@ -19,8 +19,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        actionBar?.hide()
         customToolbar("Sign in")
+
 
         binding.btnLogin.setOnClickListener {
             intentToMain()

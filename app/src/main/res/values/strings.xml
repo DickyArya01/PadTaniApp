@@ -28,6 +28,7 @@
     <string name="Inpara">Inpara</string>
     <string name="app_slogan">Rawat padimu, perbanyak panenmu dengan PadTani</string>
     <string name="bibit">Bibit</string>
-    <string name="slogan_location">Cari mitra Terdekat</string>
+    <string name="slogan_location">Cari mitra</string>
     <string name="slogan_calculate">Rencanakan modal produksi sawahmu dengan padTani.</string>
+    <string name="explore">explore</string>
 </resources>

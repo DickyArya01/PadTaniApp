@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PadTaniApp">
         <activity
+            android:name=".camera"
+            android:exported="false" />
+        <activity
+            android:name=".ui.splashscreen.SplashCamera"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity2"
             android:exported="false"
             android:label="@string/title_activity_main2" />
@@ -22,7 +28,7 @@
             android:exported="false"
             android:theme="@style/Theme.PadTaniApp" />
         <activity
-            android:name="com.kelompok27.padtaniapp.ui.splashscreen.SplashscreenActivity"
+            android:name=".ui.splashscreen.SplashscreenActivity"
             android:exported="true"
             android:theme="@style/NoBar">
             <intent-filter>
