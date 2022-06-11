@@ -31,4 +31,8 @@
     <string name="slogan_location">Cari mitra</string>
     <string name="slogan_calculate">Rencanakan modal produksi sawahmu dengan padTani.</string>
     <string name="explore">explore</string>
+    <string name="kondisi_padi">Kondisi Padi</string>
+    <string name="kondisi">kondisi</string>
+    <string name="index_bwd">Index BWD</string>
+    <string name="bwd">BWD</string>
 </resources>

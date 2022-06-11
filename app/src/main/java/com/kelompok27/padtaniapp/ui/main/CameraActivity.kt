@@ -1,5 +1,6 @@
 package com.kelompok27.padtaniapp.ui.main
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,6 +17,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import com.kelompok27.padtaniapp.R
 import com.kelompok27.padtaniapp.databinding.ActivityCameraBinding
+import com.kelompok27.padtaniapp.ui.splashscreen.SplashCamera
 
 class CameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraBinding
@@ -26,6 +28,12 @@ class CameraActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCameraBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.btnClose.setOnClickListener {
+            Intent(this@CameraActivity, MainActivity::class.java).also {
+                startActivity(it)
+            }
+        }
 
         binding.btnCapture.setOnClickListener { takePhoto() }
 
