@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PadTaniApp">
         <activity
-            android:name=".DetailActivity"
+            android:name=".ui.main.DetailActivity"
             android:exported="false" />
         <activity
             android:name=".ui.main.CameraActivity"
