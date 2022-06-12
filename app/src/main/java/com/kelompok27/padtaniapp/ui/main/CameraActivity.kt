@@ -16,11 +16,6 @@ import androidx.core.content.ContextCompat
 import com.kelompok27.padtaniapp.R
 import com.kelompok27.padtaniapp.databinding.ActivityCameraBinding
 import java.io.File
-import java.time.LocalDate
-import java.time.LocalDateTime
-import java.time.LocalTime
-import java.time.format.DateTimeFormatter
-import kotlin.random.Random
 
 class CameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraBinding
@@ -95,7 +90,7 @@ class CameraActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
 
-                    
+
                 }
             }
         )
