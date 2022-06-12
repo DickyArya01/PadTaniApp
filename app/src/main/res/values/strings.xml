@@ -15,7 +15,7 @@
     <string name="location">Location</string>
     <string name="profile">Profile</string>
     <string name="fragment">fragment</string>
-    <string name="harga">harga</string>
+    <string name="harga">Harga</string>
     <string name="title_activity_main2">MainActivity2</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
@@ -35,4 +35,8 @@
     <string name="kondisi">kondisi</string>
     <string name="index_bwd">Index BWD</string>
     <string name="bwd">BWD</string>
+    <string name="_123">123</string>
+    <string name="hama">Hama</string>
+    <string name="texture">Texture</string>
+    <string name="anjuran_tanam">Anjuran Tanam</string>
 </resources>

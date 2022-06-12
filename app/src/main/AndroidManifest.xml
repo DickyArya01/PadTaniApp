@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PadTaniApp">
         <activity
+<<<<<<< HEAD
+            android:name=".ui.main.ui.explore.DetailExplore"
+            android:exported="false" />
+        <activity
+=======
+>>>>>>> 6d795bdd31b5d9cc384d77e40ea4d0a19835cd76
             android:name=".ui.main.DetailActivity"
             android:exported="false" />
         <activity
