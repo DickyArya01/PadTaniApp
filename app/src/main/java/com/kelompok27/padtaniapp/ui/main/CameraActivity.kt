@@ -19,9 +19,6 @@ import java.io.File
 
 class CameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraBinding
-    private var imageCapture: ImageCapture? = null
-    private var cameraSelector: CameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
-    private lateinit var outputDirectory: File
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,23 +32,12 @@ class CameraActivity : AppCompatActivity() {
             }
         }
 
-        outputDirectory = getOutPutDirectory()
 
         binding.btnCapture.setOnClickListener { takePhoto() }
 
         binding.btnFolder.setOnClickListener { openGallery() }
 
         binding.btnClose.setOnClickListener { closeCameraActivity() }
-    }
-
-    private fun getOutPutDirectory(): File {
-        val mediaDir = this.externalMediaDirs?.firstOrNull()?.let {
-            File(it, resources.getString(R.string.app_name)).apply {
-                mkdirs()
-            }
-        }
-        return if (mediaDir != null && mediaDir.exists())
-            mediaDir else this.filesDir
     }
 
     private fun closeCameraActivity() {
@@ -67,33 +53,9 @@ class CameraActivity : AppCompatActivity() {
     }
 
     private fun takePhoto() {
-        val imageCapture = imageCapture ?: return
-
-        val fileName = getFileString(15)
-        val photoFile = File(outputDirectory, "padi-$fileName.jpg")
-        val outputOptions = ImageCapture.OutputFileOptions.Builder(photoFile).build()
-        imageCapture.takePicture(
-            outputOptions,
-            ContextCompat.getMainExecutor(this),
-            object : ImageCapture.OnImageSavedCallback {
-                override fun onError(exc: ImageCaptureException) {
-                    Toast.makeText(
-                        this@CameraActivity,
-                        "Gagal mengambil gambar.",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-                override fun onImageSaved(output: ImageCapture.OutputFileResults) {
-                    Toast.makeText(
-                        this@CameraActivity,
-                        "Berhasil mengambil gambar",
-                        Toast.LENGTH_SHORT
-                    ).show()
-
-
-                }
-            }
-        )
+        Intent(this@CameraActivity, DetailActivity::class.java).also {
+            startActivity(it)
+        }
     }
 
     private fun openGallery() {
@@ -106,39 +68,6 @@ class CameraActivity : AppCompatActivity() {
 
     private fun startCamera() {
 
-        val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
-
-        cameraProviderFuture.addListener({
-            val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
-            val preview = Preview.Builder()
-                .setTargetRotation(Surface.ROTATION_0)
-                .setTargetAspectRatio(AspectRatio.RATIO_4_3)
-                .build()
-                .also {
-                    it.setSurfaceProvider(binding.cameraFinder.surfaceProvider)
-                }
-
-            imageCapture = ImageCapture.Builder()
-                .setTargetRotation(binding.cameraFinder.display.rotation)
-                .setTargetResolution(Size(300, 300))
-                .build()
-
-            try {
-                cameraProvider.unbindAll()
-                cameraProvider.bindToLifecycle(
-                    this,
-                    cameraSelector,
-                    preview,
-                    imageCapture
-                )
-            } catch (exc: Exception) {
-                Toast.makeText(
-                    this@CameraActivity,
-                    "Gagal memunculkan kamera.",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-        }, ContextCompat.getMainExecutor(this))
     }
 
     private fun hideSystemUI() {
@@ -153,9 +82,4 @@ class CameraActivity : AppCompatActivity() {
         supportActionBar?.hide()
     }
 
-    private fun getFileString(length: Int): String {
-        val char = ('A' .. 'Z') + ('a' .. 'z') + ('0' .. '9')
-        return (1 .. length)
-            .map { char.random() }
-            .joinToString("")}
 }
