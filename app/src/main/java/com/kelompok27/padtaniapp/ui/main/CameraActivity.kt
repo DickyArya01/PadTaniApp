@@ -1,18 +1,20 @@
 package com.kelompok27.padtaniapp.ui.main
 
+import android.R.attr.data
+import android.content.ContentResolver
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.util.Size
-import android.view.Surface
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
@@ -21,8 +23,12 @@ import com.kelompok27.padtaniapp.R
 import com.kelompok27.padtaniapp.databinding.ActivityCameraBinding
 import com.kelompok27.padtaniapp.helper.Constant
 import java.io.File
+import java.io.FileOutputStream
+import java.io.InputStream
+import java.io.OutputStream
 import java.text.SimpleDateFormat
 import java.util.*
+
 
 class CameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraBinding
@@ -156,6 +162,7 @@ class CameraActivity : AppCompatActivity() {
                     val intent = Intent(this@CameraActivity, DetailActivity::class.java)
                     intent.putExtra(Constant.TAGUri, savedUri.toString())
                     startActivity(intent)
+                    finish()
 
                 }
                 override fun onError(exception: ImageCaptureException) {
@@ -168,11 +175,24 @@ class CameraActivity : AppCompatActivity() {
     }
 
     private fun openGallery() {
-        Toast.makeText(
-            this@CameraActivity,
-            "Yee buka gallery",
-            Toast.LENGTH_SHORT
-        ).show()
+        val intent = Intent()
+        intent.action = Intent.ACTION_GET_CONTENT
+        intent.type = "image/*"
+        val chooser = Intent.createChooser(intent, "Choose a Picture")
+        launcherIntentGallery.launch(chooser)
+    }
+
+    private val launcherIntentGallery = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ){
+        if (it.resultCode == RESULT_OK){
+            val selectedImg: Uri = it.data?.data as Uri
+            val intent = Intent(this@CameraActivity, DetailActivity::class.java)
+            intent.putExtra(Constant.TAGUri, selectedImg.toString())
+            startActivity(intent)
+        } else {
+            Log.d("gallery", "error ")
+        }
     }
 
 
@@ -187,5 +207,6 @@ class CameraActivity : AppCompatActivity() {
         }
         supportActionBar?.hide()
     }
+
 
 }
