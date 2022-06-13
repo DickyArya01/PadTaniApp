@@ -148,6 +148,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:background="@color/white_200"
+        style="@style/CustomTabStyle"
         app:tabSelectedTextColor="@color/white_200"
         app:tabTextColor="@color/white_600"
         app:layout_constraintEnd_toEndOf="@+id/flBanner"
