@@ -42,17 +42,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/custom_ic_email"
+                android:drawablePadding="12dp"
                 android:hint="@string/email"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:paddingHorizontal="12dp"
+                android:textColor="#AAAAAA"
+                android:textColorHint="#546E7A"
+                android:textSize="16sp" />
 
             <com.kelompok27.padtaniapp.ui.component.PasswordEditText
                 android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/custom_ic_key"
+                android:drawablePadding="12dp"
                 android:hint="@string/password"
                 android:minHeight="48dp"
-                android:textColorHint="#546E7A" />
+                android:paddingHorizontal="12dp"
+                android:textColor="#AAAAAA"
+                android:textColorHint="#546E7A"
+                android:textSize="16sp" />
 
             <CheckBox
                 android:id="@+id/checkBox"

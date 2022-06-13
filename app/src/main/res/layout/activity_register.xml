@@ -43,24 +43,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/custom_ic_profile"
+                android:drawablePadding="8dp"
                 android:hint="@string/nama"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:paddingHorizontal="12dp"
+                android:textColor="#AAAAAA"
+                android:textColorHint="#546E7A" />
 
             <com.kelompok27.padtaniapp.ui.component.EmailEditText
                 android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/custom_ic_email"
+                android:drawablePadding="8dp"
                 android:hint="@string/email"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:paddingHorizontal="12dp"
+                android:textColor="#AAAAAA"
+                android:textColorHint="#546E7A" />
 
             <com.kelompok27.padtaniapp.ui.component.PasswordEditText
                 android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/custom_ic_key"
+                android:drawablePadding="8dp"
                 android:hint="@string/password"
                 android:minHeight="48dp"
+                android:paddingHorizontal="12dp"
+                android:textColor="#AAAAAA"
                 android:textColorHint="#546E7A" />
 
             <com.kelompok27.padtaniapp.ui.component.PasswordEditText
@@ -68,8 +85,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/custom_ic_key"
+                android:drawablePadding="8dp"
                 android:hint="@string/konfirmasi_password"
                 android:minHeight="48dp"
+                android:paddingHorizontal="12dp"
+                android:textColor="#AAAAAA"
                 android:textColorHint="#546E7A" />
 
             <Button

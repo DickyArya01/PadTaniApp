@@ -2,7 +2,6 @@ package com.kelompok27.padtaniapp.api
 
 import com.kelompok27.padtaniapp.model.BibitResponse
 import com.kelompok27.padtaniapp.model.LoginResponse
-import retrofit2.Call
 import retrofit2.http.*
 
 interface ApiConfig {
@@ -12,7 +11,7 @@ interface ApiConfig {
     fun login(
         @Field("email") email: String,
         @Field("password") password: String
-    ): Call<LoginResponse>
+    ): retrofit2.Call<LoginResponse>
 
 //    @FormUrlEncoded
 //    @POST("register")
@@ -24,7 +23,7 @@ interface ApiConfig {
 
     @GET("padi")
     fun getBibit(
-    ): Call<BibitResponse>
+    ): retrofit2.Call<BibitResponse>
 
 
 
