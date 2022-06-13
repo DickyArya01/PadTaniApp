@@ -17,14 +17,4 @@ class InparaFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_inpara, container, false)
     }
 
-    companion object {
-        private const val ARG_COUNT = "Inpara"
-        fun newInstance(counter: Int?): InparaFragment {
-            val fragment = InparaFragment()
-            val args = Bundle()
-            args.putInt(ARG_COUNT, counter!!)
-            fragment.arguments = args
-            return fragment
-        }
-    }
 }

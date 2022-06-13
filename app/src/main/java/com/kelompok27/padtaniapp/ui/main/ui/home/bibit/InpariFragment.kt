@@ -21,14 +21,4 @@ class InpariFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_inpari, container, false)
     }
 
-    companion object {
-        private const val ARG_COUNT = "Inpari"
-        fun newInstance(counter: Int?): InpariFragment {
-            val fragment = InpariFragment()
-            val args = Bundle()
-            args.putInt(ARG_COUNT, counter!!)
-            fragment.arguments = args
-            return fragment
-        }
-    }
 }

@@ -18,14 +18,4 @@ class InpagoFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_inpago, container, false)
     }
 
-    companion object {
-        private const val ARG_COUNT = "Inpago"
-        fun newInstance(counter: Int?): InpagoFragment {
-            val fragment = InpagoFragment()
-            val args = Bundle()
-            args.putInt(ARG_COUNT, counter!!)
-            fragment.arguments = args
-            return fragment
-        }
-    }
 }

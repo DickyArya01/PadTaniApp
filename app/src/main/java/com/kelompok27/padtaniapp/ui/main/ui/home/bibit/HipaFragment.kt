@@ -17,14 +17,4 @@ class HipaFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_hipa, container, false)
     }
 
-    companion object {
-        private const val ARG_COUNT = "Hipa"
-        fun newInstance(counter: Int?): HipaFragment {
-            val fragment = HipaFragment()
-            val args = Bundle()
-            args.putInt(ARG_COUNT, counter!!)
-            fragment.arguments = args
-            return fragment
-        }
-    }
 }
