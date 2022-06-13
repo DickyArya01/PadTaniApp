@@ -20,7 +20,6 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         actionBar?.hide()
-        customToolbar("Sign in")
 
 
         binding.btnLogin.setOnClickListener {
@@ -44,12 +43,6 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun customToolbar(description: String){
-        customToolbar= findViewById(R.id.toolbar)
-        textToolbar = findViewById(R.id.toolbarTitle)
 
-        setSupportActionBar(customToolbar)
-        textToolbar.text = description
-    }
 
 }
