@@ -14,13 +14,19 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.kelompok27.padtaniapp.R
+import com.kelompok27.padtaniapp.adapter.ViewPagerAdapter
 import com.kelompok27.padtaniapp.databinding.ActivityMainBinding
 import com.kelompok27.padtaniapp.ui.login.LoginActivity
 import com.kelompok27.padtaniapp.ui.main.ui.calculate.CalculateFragment
 import com.kelompok27.padtaniapp.ui.main.ui.explore.ExploreFragment
 import com.kelompok27.padtaniapp.ui.main.ui.home.HomeFragment
+import com.kelompok27.padtaniapp.ui.main.ui.home.bibit.HipaFragment
+import com.kelompok27.padtaniapp.ui.main.ui.home.bibit.InpagoFragment
+import com.kelompok27.padtaniapp.ui.main.ui.home.bibit.InparaFragment
+import com.kelompok27.padtaniapp.ui.main.ui.home.bibit.InpariFragment
 import com.kelompok27.padtaniapp.ui.main.ui.location.LocationFragment
 import com.kelompok27.padtaniapp.ui.main.ui.profile.ProfileFragment
 import com.kelompok27.padtaniapp.ui.splashscreen.SplashCamera
@@ -76,6 +82,8 @@ class MainActivity : AppCompatActivity() {
             }
             false
         }
+
+
     }
 
     private fun makeCurrentFragment(fragment: Fragment) {

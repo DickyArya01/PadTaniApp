@@ -1,25 +1,42 @@
 package com.kelompok27.padtaniapp.ui.main.ui.home
 
+
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayoutMediator
 import com.kelompok27.padtaniapp.R
+import com.kelompok27.padtaniapp.adapter.ViewPagerAdapter
 import com.kelompok27.padtaniapp.databinding.FragmentHomeBinding
+import com.kelompok27.padtaniapp.ui.main.MainActivity
+import com.kelompok27.padtaniapp.ui.main.ui.home.bibit.HipaFragment
+import com.kelompok27.padtaniapp.ui.main.ui.home.bibit.InpagoFragment
+import com.kelompok27.padtaniapp.ui.main.ui.home.bibit.InparaFragment
+import com.kelompok27.padtaniapp.ui.main.ui.home.bibit.InpariFragment
 
-class HomeFragment : Fragment() {
 
-    private lateinit var binding: FragmentHomeBinding
+@Suppress("UNREACHABLE_CODE")
+class HomeFragment : Fragment(R.layout.fragment_home) {
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        _binding = FragmentHomeBinding.bind(view)
+
+        val viewPager2: ViewPager2 = binding.viewPager
+
+        val fragment: ArrayList<Fragment> = arrayListOf(
+            HipaFragment(),
+            InpagoFragment(),
+            InparaFragment(),
+            InpariFragment()
+        )
+
+        val adapter = ViewPagerAdapter(fragment, this)
+        viewPager2.adapter = adapter
     }
-
 
 }
 
