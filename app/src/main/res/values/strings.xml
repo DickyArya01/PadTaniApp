@@ -39,4 +39,7 @@
     <string name="hama">Hama</string>
     <string name="texture">Texture</string>
     <string name="anjuran_tanam">Anjuran Tanam</string>
+    <string name="keterangan_penyakit">Keterangan Penyakit</string>
+    <string name="solusi">Solusi</string>
+    <string name="anjuran_pemupukan">Anjuran Pemupukan</string>
 </resources>

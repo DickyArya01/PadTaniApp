@@ -43,7 +43,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     0 -> view.text = "Hipa"
                     1 -> view.text = "Inpago"
                     2 -> view.text = "Inpari"
-                    3 -> view.text = "Ipara"
+                    3 -> view.text = "Inpara"
                 }
             }.attach()
         }
