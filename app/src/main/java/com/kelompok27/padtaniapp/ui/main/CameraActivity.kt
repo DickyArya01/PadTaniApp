@@ -1,6 +1,7 @@
 package com.kelompok27.padtaniapp.ui.main
 
 import android.R.attr.data
+import android.annotation.SuppressLint
 import android.content.ContentResolver
 import android.content.Context
 import android.content.Intent
@@ -9,6 +10,8 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.util.Size
+import android.view.Surface
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
@@ -28,6 +31,7 @@ import java.io.InputStream
 import java.io.OutputStream
 import java.text.SimpleDateFormat
 import java.util.*
+import java.util.concurrent.TimeUnit
 
 
 class CameraActivity : AppCompatActivity() {
@@ -101,6 +105,7 @@ class CameraActivity : AppCompatActivity() {
         startCamera()
     }
 
+    @SuppressLint("RestrictedApi")
     private fun startCamera() {
         val cameraProviderFuture = ProcessCameraProvider
             .getInstance(this)
@@ -109,6 +114,8 @@ class CameraActivity : AppCompatActivity() {
             val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
 
             val preview = Preview.Builder()
+                .setTargetRotation(Surface.ROTATION_0)
+                .setTargetAspectRatio(AspectRatio.RATIO_4_3)
                 .build()
                 .also { mPreview ->
                     mPreview.setSurfaceProvider(
@@ -117,6 +124,8 @@ class CameraActivity : AppCompatActivity() {
                 }
 
             imageCapture = ImageCapture.Builder()
+                .setTargetRotation(binding.cameraFinder.display.rotation)
+                .setTargetResolution(Size(300 , 300))
                 .build()
 
             val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
@@ -125,6 +134,15 @@ class CameraActivity : AppCompatActivity() {
                cameraProvider.bindToLifecycle(
                    this, cameraSelector, preview, imageCapture
                )
+                preview.setSurfaceProvider(binding.cameraFinder.surfaceProvider)
+                val cameraControl = preview.camera?.cameraControl
+                val factory = SurfaceOrientedMeteringPointFactory(1f , 1f)
+                val point = factory.createPoint(.25f , .5f)
+                val action = FocusMeteringAction.Builder(point , FocusMeteringAction.FLAG_AF)
+                    .setAutoCancelDuration(2 , TimeUnit.SECONDS)
+                    .build()
+                cameraControl!!.startFocusAndMetering(action)
+
             }catch (e: Exception) {
                 Log.d(Constant.TAG, "start camerax failed", e)
             }
