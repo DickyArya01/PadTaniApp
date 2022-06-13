@@ -1,0 +1,7 @@
+bacterial_leaf_blight
+brown_spot
+healthy
+hispa
+leaf_blast
+leaf_scald
+narrow_brown_spot
