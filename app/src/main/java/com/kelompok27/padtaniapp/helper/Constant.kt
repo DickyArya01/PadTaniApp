@@ -8,5 +8,5 @@ object Constant {
     const val REQUEST_CODE_PERMISSION = 155
     const val TAGUri = "picture"
     val REQUIRED_PERMISSION = arrayOf(Manifest.permission.CAMERA)
-    const val ITEM_COUNT = 4
+    const val Okhttp = "okhttp"
 }
