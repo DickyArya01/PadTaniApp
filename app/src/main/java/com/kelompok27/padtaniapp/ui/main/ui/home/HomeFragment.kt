@@ -9,7 +9,6 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.kelompok27.padtaniapp.R
 import com.kelompok27.padtaniapp.adapter.ViewPagerAdapter
 import com.kelompok27.padtaniapp.databinding.FragmentHomeBinding
-import com.kelompok27.padtaniapp.ui.main.MainActivity
 import com.kelompok27.padtaniapp.ui.main.ui.home.bibit.HipaFragment
 import com.kelompok27.padtaniapp.ui.main.ui.home.bibit.InpagoFragment
 import com.kelompok27.padtaniapp.ui.main.ui.home.bibit.InparaFragment
@@ -25,7 +24,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentHomeBinding.bind(view)
 
-        val viewPager2: ViewPager2 = binding.viewPager
+//        val viewPager2: ViewPager2 = binding.viewPager
 
         val fragment: ArrayList<Fragment> = arrayListOf(
             HipaFragment(),
@@ -34,8 +33,22 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             InpariFragment()
         )
 
-        val adapter = ViewPagerAdapter(fragment, this)
-        viewPager2.adapter = adapter
+        val adapter = ViewPagerAdapter(fragment, this )
+
+
+
+        with(binding){
+            viewPager.adapter = adapter
+
+            TabLayoutMediator(tabs, viewPager) {view, position ->
+                when(position){
+                    0 -> view.text = "Hipa"
+                    1 -> view.text = "Inpago"
+                    2 -> view.text = "Inpari"
+                    3 -> view.text = "Ipara"
+                }
+            }.attach()
+        }
     }
 
 }
