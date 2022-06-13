@@ -24,8 +24,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentHomeBinding.bind(view)
 
-//        val viewPager2: ViewPager2 = binding.viewPager
-
         val fragment: ArrayList<Fragment> = arrayListOf(
             HipaFragment(),
             InpagoFragment(),
